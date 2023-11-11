@@ -26,13 +26,13 @@ jobs:
 
       # Publish the project
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output publish/wwwroot
+        run: dotnet publish --configuration Release
 
       # Rewrite base href
       - name: Rewrite base href
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1.1.0
         with:
-          html_path: publish/wwwroot/index.html
+          html_path: bin/Release/net7.0/wwwroot/index.html
           base_href: /${{ env.SOLUTION_NAME }}/
 
 
