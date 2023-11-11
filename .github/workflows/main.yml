@@ -1,0 +1,34 @@
+name: Deploy Release to GitHub Page
+
+# Define environment variables
+env:
+  SOLUTION_NAME: Portfolio # The name of the solution and .csproj file
+  BRANCH_NAME: portfolio-release # The branch name to deploy to
+
+# This action is triggered when a push is made to the master branch
+on:
+  push:
+    branches:
+      - master 
+      
+# Define the necessary permissions
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+      # Check out the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Publish the project
+      - name: Publish with dotnet
+        run: dotnet publish --configuration Release --output release  
+
+
+
+
+        
