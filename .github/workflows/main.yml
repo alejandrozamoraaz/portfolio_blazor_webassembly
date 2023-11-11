@@ -2,7 +2,7 @@ name: Deploy Release to GitHub Page
 
 # Define environment variables
 env:
-  SOLUTION_NAME: Portfolio # The name of the solution and .csproj file
+  SOLUTION_NAME: Portfolio # The name of the solution/repository
   BRANCH_NAME: portfolio-release # The branch name to deploy to
 
 # This action is triggered when a push is made to the master branch
@@ -26,8 +26,14 @@ jobs:
 
       # Publish the project
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output release  
+        run: dotnet publish --configuration Release --output release
 
+      # Rewrite base href
+      - name: Rewrite base href
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1.1.0
+        with:
+          html_path: release/index.html
+          base_href: /${{ env.SOLUTION_NAME }}/
 
 
 
