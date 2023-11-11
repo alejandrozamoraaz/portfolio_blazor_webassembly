@@ -26,14 +26,12 @@ jobs:
 
       # Publish the project
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release
+        run: dotnet publish --configuration Release --output release --nologo
 
-      # Rewrite base href
-      - name: Rewrite base href
-        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1.1.0
-        with:
-          html_path: bin/Release/net7.0/wwwroot/index.html
-          base_href: /${{ env.SOLUTION_NAME }}/
+      # Rewrite base tag
+      - name: Rewrite base tag in index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' release/wwwroot/index.html
+      
 
 
 
