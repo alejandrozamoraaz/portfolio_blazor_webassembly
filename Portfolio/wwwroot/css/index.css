@@ -1,0 +1,229 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+@font-face {
+    font-family: 'FontNormal';
+    src: url('../fonts/SourceCodePro-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FontLight';
+    src: url('../fonts/SourceCodePro-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FontBold';
+    src: url('../fonts/SourceCodePro-Bold.ttf') format('truetype');
+}
+
+:root {
+    --padding-small: 6px;
+    --padding-normal: 16px;
+    --padding-large: 28px;
+    --border-radius-normal: 16px;
+}
+
+* {
+    font-family: 'FontNormal', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-user-select: none;
+}
+
+#blazor-error-ui {
+    display: none;
+    z-index: 1000;
+    margin: var(--padding-large);
+    border-radius: var(--border-radius-normal);
+}
+
+    #blazor-error-ui .content-error {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;      
+        align-items: center;
+    }
+
+        #blazor-error-ui .content-error .error-message {
+            display: inline-flex;
+            align-items: center;
+        }
+
+    #blazor-error-ui a {        
+        font-size: 32px;
+        width: 45px;
+        height: 45px;
+    }
+
+
+.font-light {
+    font-family: 'FontLight', monospace;
+}
+
+.font-bold {
+    font-family: 'FontBold', monospace;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+a {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 0 var(--padding-normal);
+    border-radius: var(--border-radius-normal);
+}
+
+.button {
+
+}
+
+.button-text {
+
+}
+
+.button-icon {
+
+}
+
+.icon-button- {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    display: inline-flex;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container, .container-fluid {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        max-width: 1320px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }

@@ -1,0 +1,31 @@
+﻿@using System.Globalization
+@using Portfolio.Resources
+
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+
+<select @bind="CurrentCulture" aria-label="Culture">
+    @foreach (var culture in Culture.SupportedCultures)
+    {
+        <option value="@culture.Code">@culture.Display</option>
+    }
+</select>
+
+@code
+{
+    private string CurrentCulture
+    {
+        get => CultureInfo.CurrentCulture.Name;
+        set
+        {
+            if (CultureInfo.CurrentCulture.Name != value)
+            {
+                var js = (IJSInProcessRuntime)JS;
+                js.InvokeVoid("culture.set", value);
+
+                Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+            }
+        }
+    }
+}

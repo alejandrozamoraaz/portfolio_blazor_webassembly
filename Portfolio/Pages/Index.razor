@@ -1,0 +1,8 @@
+﻿@page "/"
+
+@foreach (var item in NavigationService.Navigation)
+{
+    <Section SectionName="@item.LinkName">
+        @item.Content
+    </Section>
+}

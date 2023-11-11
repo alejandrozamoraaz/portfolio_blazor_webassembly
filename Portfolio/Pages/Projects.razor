@@ -1,0 +1,42 @@
+﻿@using Portfolio.Services.Projects;
+@inject IProjectsService Service
+
+@CultureDisplay["Projects"]
+
+@*
+@if (Service.ProjectTypes is null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (Service.ProjectTypes.Count == 0)
+{
+    <p>Sin proyectos</p>
+}
+else
+{
+    <table class="table">
+        @foreach (var type in Service.ProjectTypes)
+        {
+            <tr>
+                <td colspan="2"><h3>@type.Type</h3></td>
+            </tr>
+
+            @foreach (var project in type.Projects)
+            {
+                <tr>
+                    <td><h4>@project.Title</h4></td>
+                    <td><p>@project.Description</p></td>
+                </tr>
+            }
+        }
+    </table>
+} *@
+
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        Service.GetProjectsByType();
+    }
+}

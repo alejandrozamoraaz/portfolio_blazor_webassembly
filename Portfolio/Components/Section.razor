@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Rendering
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.JSInterop
+@using System.Diagnostics.CodeAnalysis
+
+@inject NavigationManager NavigationManager;
+@inject IJSRuntime JSRuntime;
+
+<section id="@SectionName">
+    @ChildContent
+</section>
+
+@code {
+    [Parameter]
+    public required string SectionName { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+
+    private bool SetFocus { get; set; }
+
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += OnLocationChangedAsync;
+    }
+
+    protected override void OnParametersSet()
+    {
+        SetFocus = IAM(out _);
+    }
+
+    private async void OnLocationChangedAsync(object? sender, LocationChangedEventArgs e)
+    {
+        if (IAM(out _))
+        {
+            SetFocus = true;
+            await JSRuntime.InvokeVoidAsync("scrollToSection", "#" + SectionName);
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (SetFocus)
+        {
+            await JSRuntime.InvokeVoidAsync("scrollToSection", "#" + SectionName);
+        }
+
+        SetFocus = false;
+    }
+
+    private bool IAM([NotNullWhen(true)] out string? elementId)
+    {
+        var uri = new Uri(NavigationManager.Uri, UriKind.Absolute);
+        elementId = uri.Fragment.StartsWith('#') ? uri.Fragment[1..] : null;
+        return elementId == SectionName;
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChangedAsync;
+        GC.SuppressFinalize(this);
+    }
+}
