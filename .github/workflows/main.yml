@@ -10,8 +10,7 @@ on:
   push:
     branches:
       - master 
-      
-# Define the necessary permissions
+
 permissions:
   contents: write
 
@@ -19,20 +18,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
-      # Check out the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Publish the project
       - name: Publish with dotnet
         run: dotnet publish --configuration Release --output release --nologo
 
-      # Rewrite base tag
-      - name: Rewrite base tag in index.html
+      - name: Rewrite base tag
         run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' release/wwwroot/index.html
-      
 
-
-
-        
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4 
+        with:
+          branch: ${{ env.BRANCH_NAME }}
+          folder: release/wwwroot
+          clean: true      
