@@ -1,0 +1,14 @@
+﻿.float-bottom-right-button {
+    position: fixed;
+    z-index: 900;
+    bottom: var(--padding-normal);
+    right: var(--padding-normal);
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: initial;
+}
+
+    .float-bottom-right-button i {
+        font-size: 25px;
+    }
