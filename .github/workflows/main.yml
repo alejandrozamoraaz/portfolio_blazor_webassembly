@@ -1,0 +1,35 @@
+name: Deploy Release to GitHub Page
+
+# Define environment variables
+env:
+  SOLUTION_NAME: Portfolio # The name of the solution/repository
+  BRANCH_NAME: portfolio-release # The branch name to deploy to
+
+# This action is triggered when a push is made to the master branch
+on:
+  push:
+    branches:
+      - master 
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Publish with dotnet
+        run: dotnet publish --configuration Release --output release --nologo
+
+      - name: Rewrite base tag
+        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' release/wwwroot/index.html
+
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4 
+        with:
+          branch: ${{ env.BRANCH_NAME }}
+          folder: release/wwwroot
+          clean: true      
