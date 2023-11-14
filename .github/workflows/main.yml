@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output release --nologo
+        run: dotnet publish -p:BlazorEnableCompression=false --configuration Release --output release --nologo
 
       - name: Rewrite base tag
         run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' release/wwwroot/index.html
