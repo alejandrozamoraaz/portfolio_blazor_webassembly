@@ -33,7 +33,7 @@ jobs:
         run: dotnet publish -p:CompressionEnabled=false --configuration Release --nologo
 
       - name: Rewrite base tag
-        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' /home/runner/work/Portfolio/Portfolio/Portfolio/bin/Release/net8.0/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' index.html
 
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4 
