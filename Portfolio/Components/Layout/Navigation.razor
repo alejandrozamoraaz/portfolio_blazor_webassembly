@@ -1,0 +1,10 @@
+﻿<div class="navigation color-background">
+    @for (int i = 0; i < NavigationService.Navigation.Count; i++)
+    {
+        var item = NavigationService.Navigation[i];
+        <NavLink href="@("#" + item.LinkName)" class="@("button " + (i == 0 ? "active" : ""))">
+            <img class="icon-large" src="@item.IconUrl" alt="@item.IconAlt" />
+            <h6 class="text-small">@item.Name</h6>
+        </NavLink>
+    }
+</div>

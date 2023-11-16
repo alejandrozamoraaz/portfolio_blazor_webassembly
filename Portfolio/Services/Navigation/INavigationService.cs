@@ -10,8 +10,8 @@ public interface INavigationService
 public record NavigationRecord
 {
     public required string Name { get; init; }
-    public required string Icon { get; init; }
+    public required string IconUrl { get; init; }
+    public string? IconAlt { get; init; }
     public required string LinkName { get; init; }
-    public required string LinkUrl { get; init; }
     public required RenderFragment Content { get; init; }
 }

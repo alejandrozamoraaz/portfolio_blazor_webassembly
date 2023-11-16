@@ -1,5 +1,9 @@
 ﻿@page "/"
 
+<Section SectionName="Header">
+    <Portfolio.Pages.Sections.Header />
+</Section>
+
 @foreach (var item in NavigationService.Navigation)
 {
     <Section SectionName="@item.LinkName">

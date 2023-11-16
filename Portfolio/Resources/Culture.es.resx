@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contactar</value>
+  </data>
+  <data name="Designer" xml:space="preserve">
+    <value>Diseñador</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Desarrollador</value>
+  </data>
+  <data name="Engineer" xml:space="preserve">
+    <value>Ingeniero</value>
+  </data>
+  <data name="IAM" xml:space="preserve">
+    <value>Yo soy</value>
+  </data>
   <data name="PortfolioTitle" xml:space="preserve">
     <value>Portafolio de Junior Alejandro Zamora</value>
   </data>

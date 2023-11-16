@@ -14,12 +14,34 @@ public class NavigationService : INavigationService
         {
             new () {
                 Name = cultureDisplay["Projects"],
-                Icon = "bi-bookmark-star-fill",///"bi-award-fill",
+                IconUrl = "https://img.icons8.com/3d-fluency/94/news.png",
+                IconAlt = "Noticias - icon by Icons8",
                 LinkName = "Projects",
-                LinkUrl = "#Projects",
                 Content = builder =>
                 {
-                    builder.OpenComponent<Pages.Projects>(0);
+                    builder.OpenComponent<Pages.Sections.Projects>(0);
+                    builder.CloseComponent();
+                }
+            },
+            new () {
+                Name = cultureDisplay["About"],
+                IconUrl = "https://img.icons8.com/3d-fluency/94/user-male--v4.png",
+                IconAlt = "Usuario masculino - icon by Icons8",
+                LinkName = "About",
+                Content = builder =>
+                {
+                    builder.OpenComponent<Pages.Sections.About>(0);
+                    builder.CloseComponent();
+                }
+            },
+            new () {
+                Name = cultureDisplay["Contact"],
+                IconUrl = "https://img.icons8.com/3d-fluency/94/chat.png",
+                IconAlt = "Charla - icon by Icons8",
+                LinkName = "Contact",
+                Content = builder =>
+                {
+                    builder.OpenComponent<Pages.Sections.Contact>(0);
                     builder.CloseComponent();
                 }
             }
