@@ -32,6 +32,13 @@ jobs:
       - name: Publish with dotnet
         run: dotnet publish -p:CompressionEnabled=false --configuration Release --nologo
 
+      - name: List Files in Output Directory
+        run: ls -R bin/Release/net8.0/wwwroot
+
+      - name: List Files in Publish Directory
+        run: ls -R bin/Release/net8.0
+
+
       - name: Rewrite base tag
         run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' wwwroot/index.html
 
