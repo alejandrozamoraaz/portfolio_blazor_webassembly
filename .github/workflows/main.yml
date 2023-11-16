@@ -30,7 +30,7 @@ jobs:
         run: dotnet workload restore
         
       - name: Publish with dotnet
-        run: dotnet publish -p:CompressionEnabled=false --configuration Release --output release --nologo
+        run: dotnet publish -p:CompressionEnabled=false --configuration Release --nologo
 
       - name: Rewrite base tag
         run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.SOLUTION_NAME }}\/" \/>/g' release/wwwroot/index.html
@@ -39,5 +39,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4 
         with:
           branch: ${{ env.BRANCH_NAME }}
-          folder: release/wwwroot
+          folder: bin/Release/net8.0/wwwroot
           clean: true      
