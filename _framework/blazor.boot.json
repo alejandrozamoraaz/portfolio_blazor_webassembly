@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Portfolio",
   "resources": {
-    "hash": "sha256-dIA5b5aDB/iRbASfeXOab1JcVN7H/IO4T89YYoLbEZU=",
+    "hash": "sha256-g1qMl3r9iGYlEyvljuRKKZiTEoY2Tcs/lVwUlWH2YwQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.9z7cwh0cjx.js": "sha256-OYxNlewKCr1shOOolxXlQ8zavg29ykr2/7NHh66gylw="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.0.t0913f5lcu.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-GnBhzZD3H6786aVbZPV9/z46RYe7qllmmESG6zl0x18="
+      "dotnet.native.wasm": "sha256-Prf2ULD9K5k3fUBx4AtvT4hCjeyux0AaJBrwc88Vt5U="
     },
     "icu": {
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
@@ -31,7 +31,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-LXjqa+5aR5Gx6ByltoaMiOqS3ctgmRbRL1o3Dg1o4Es=",
       "Microsoft.JSInterop.dll": "sha256-v58nTxqT/57/HK9I6twq5PcgpA4LqPm+JurZEF39bq0=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-eVQ51rFmPFH/fTV48k8NH3vcsiUMqH+zrihPSE46DcI=",
-      "Portfolio.dll": "sha256-g3aFy6vVxw9HXKs0RNjHyfFDk8A7xwIlY226IlEepiM=",
+      "Portfolio.dll": "sha256-z6UHYQ4iXUCqrloocaE9CXS/EJI2Y2Tl8Q2//rsMDvs=",
       "System.Collections.Concurrent.dll": "sha256-1HVLqrmdh3Jei42LaZp9DwimpC0hZUaz/Yw2zJR6c1k=",
       "System.Collections.dll": "sha256-MGrmXUsREuQWAN9cx48mhDe56Qc83kvIGzo7FsDsY8U=",
       "System.ComponentModel.dll": "sha256-HTvoKIk6MU795HAcYTHvEDjJsNXuzdGO+IfR9BJMaxo=",
@@ -50,7 +50,7 @@
     },
     "satelliteResources": {
       "es": {
-        "Portfolio.resources.dll": "sha256-6+DRVFlkss1sxllLYiCwaACJdkSkMXfVIQOOPdFHygY="
+        "Portfolio.resources.dll": "sha256-OrexD/ZpFiu7tyDugqapQkvvS8v48+0PJoqV4MwqcT4="
       }
     }
   },
