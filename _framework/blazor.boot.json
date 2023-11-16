@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Portfolio",
   "resources": {
-    "hash": "sha256-VltjK6zQmdDfVAi0nBX9vjGk+cjyTq61dbCwNXKo7kY=",
+    "hash": "sha256-LIcY26C6Y4WoaIuL6eptSRQUMUd7h/j4S9H6QfdDl9Y=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.9z7cwh0cjx.js": "sha256-OYxNlewKCr1shOOolxXlQ8zavg29ykr2/7NHh66gylw="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.0.t0913f5lcu.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-7iobxl/CzDqSAwn4ecsPvSLl4nX57l5RC3U7enCn/Mo="
+      "dotnet.native.wasm": "sha256-EjTMLbRM4362obxfhsuGg0GXWPlkscCllIa8DWjz0Jg="
     },
     "icu": {
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
@@ -26,13 +26,13 @@
       "Microsoft.Extensions.Localization.Abstractions.dll": "sha256-zn3vqB87/7GSj8bJOgYZiTRxzyICNhi9wUW2Mvofsnk=",
       "Microsoft.Extensions.Localization.dll": "sha256-Vzh+ZxnHea8eXGFWaKTgx1R/zhHfmcswWpxi7iNk2sU=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-qLqDURkODJEaLznMBPXG2jvPJ6ZqeSoJbDGNnEND2hU=",
-      "Microsoft.Extensions.Logging.dll": "sha256-ITHUKwI8MVgEKYqn/tHHv1UPMnYsV/k+COqMyoz+q+o=",
-      "Microsoft.Extensions.Options.dll": "sha256-W7sExPtpJpjidjkfzsSE6aq+5KjEjQZ2pYRfVnKPZ9s=",
+      "Microsoft.Extensions.Logging.dll": "sha256-ZhTEj53Q6G1Z6DzYnhjRIMc51VqhgtLpGsAXMdJSEOE=",
+      "Microsoft.Extensions.Options.dll": "sha256-Dutfqd2rwIqEIoDQfN5UIjLIeHBYjTe22Iz1wVEpPVs=",
       "Microsoft.Extensions.Primitives.dll": "sha256-LXjqa+5aR5Gx6ByltoaMiOqS3ctgmRbRL1o3Dg1o4Es=",
       "Microsoft.JSInterop.dll": "sha256-v58nTxqT/57/HK9I6twq5PcgpA4LqPm+JurZEF39bq0=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-eVQ51rFmPFH/fTV48k8NH3vcsiUMqH+zrihPSE46DcI=",
-      "Portfolio.dll": "sha256-9ZiyRYwa4F+sOSX1izWJvQP7lbLnbbnUU6JJZ/CJcH8=",
-      "System.Collections.Concurrent.dll": "sha256-Q3yLg8YCIH+yLMQm5lyEzIb5xbnsQu9xWow/1bkQ+80=",
+      "Portfolio.dll": "sha256-/BP8GGR8fGOxXDknHMVWDdzcvD9onFQXCJiVis22aHI=",
+      "System.Collections.Concurrent.dll": "sha256-1HVLqrmdh3Jei42LaZp9DwimpC0hZUaz/Yw2zJR6c1k=",
       "System.Collections.dll": "sha256-MGrmXUsREuQWAN9cx48mhDe56Qc83kvIGzo7FsDsY8U=",
       "System.ComponentModel.dll": "sha256-HTvoKIk6MU795HAcYTHvEDjJsNXuzdGO+IfR9BJMaxo=",
       "System.Console.dll": "sha256-6e+Fych3aJnESR8uLPrtI2J6oCEXpgIEYqHFf81tb5M=",
@@ -50,7 +50,7 @@
     },
     "satelliteResources": {
       "es": {
-        "Portfolio.resources.dll": "sha256-SxKyZpZmzSYJZ6tgA9ZdHB0N5886crbctsMFQM4Jz2o="
+        "Portfolio.resources.dll": "sha256-yQZeEcuKgunnyh6kMqev67mS6oDFgsw/7dMYtulO53s="
       }
     }
   },
