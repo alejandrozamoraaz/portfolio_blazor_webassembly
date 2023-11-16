@@ -33,7 +33,7 @@ jobs:
         run: dotnet publish -p:CompressionEnabled=false --configuration Release --nologo
 
       - name: List Files in Publish Directory
-        run: ls -R bin/Release/net8.0
+        run: ls -R /home/runner/work/Portfolio
    
 
 
