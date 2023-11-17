@@ -1,4 +1,4 @@
-﻿import { BrotliDecode } from './js/decode.min.js';
+﻿import { BrotliDecode } from 'js/decode.min.js';
 
 Blazor.start({
     loadBootResource: function (type, name, defaultUri, integrity) {
