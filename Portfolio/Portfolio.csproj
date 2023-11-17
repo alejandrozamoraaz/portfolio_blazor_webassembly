@@ -7,7 +7,6 @@
 
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 
-    <WasmEnableWebcil>false</WasmEnableWebcil>
     <RunAOTCompilation>true</RunAOTCompilation>
     <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
   </PropertyGroup>
