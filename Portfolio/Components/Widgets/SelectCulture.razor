@@ -4,6 +4,8 @@
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 
+@CurrentCulture
+
 <select @bind="CurrentCulture" aria-label="Culture" class="button">
     @foreach (var culture in Culture.SupportedCultures)
     {
@@ -23,7 +25,7 @@
                 var js = (IJSInProcessRuntime)JS;
                 js.InvokeVoid("culture.set", value);
 
-                Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+                Navigation.Refresh(true);
             }
         }
     }
