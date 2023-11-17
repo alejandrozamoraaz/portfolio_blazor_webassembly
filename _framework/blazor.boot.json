@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Portfolio",
   "resources": {
-    "hash": "sha256-83+v347VEiLnGCjz9mqp1A/304oVhHkENDteji7yfHo=",
+    "hash": "sha256-9Mghg3kZYG9x3IF3w8dQKifVEOIpIQrcrXH3rJi+uM8=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -15,9 +15,9 @@
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
     },
     "assembly": {
-      "Microsoft.AspNetCore.Components.wasm": "sha256-1N79jSw6I8Sjw7U2/sMfGfrS+RoJ6hsH2mNOcwscra0=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-BdJP3q+AHD1FVgES1WDImQUa5cuCSxWHtUsdkSryKqg=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-ivj7kxN8rrhTm1UV0H7dhsOewu6rhATFU2ZAG/YKLvA=",
-      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Ws5szf6fWPAXna+XyWsAhavx+WDFcA/91DQ7iPRPCMs=",
+      "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-x6Hokc5lYxAbA97hZMD/BAP/40O5pnL5nMyzMoNygcE=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-87sn2TYqgdZ95sXmavjKEzoEfMgHnYQ9LOvnMX+aZcI=",
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-Sxmy2ZS134URxbHEvdbS6NcQ3zXS7UWx/5ZPpwiW7FA=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-jYqHUZ07UYWc8POk7xhas6xQYH7t1qoTcylqoDqncJk=",
@@ -31,7 +31,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-6187ynEahDlSLMBvD4vAmiLpZ3clRb5xu6rM7O8AxNo=",
       "Microsoft.JSInterop.wasm": "sha256-lXwhdv0Is9FMH/j0+WH3zoNWAGLbVaONtGucJ/4URQ0=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
-      "Portfolio.wasm": "sha256-tmnczDLYC75Afu7LYb59/CicuVstXDbnPjsBZ92+pJI=",
+      "Portfolio.wasm": "sha256-TjLYHH+Z5L0NAkXkOJcZl+yHwum9hflSkLEzgDySNH0=",
       "System.Collections.Concurrent.wasm": "sha256-RMysCmsNfkwkkl6XfXRyID9KEepQGAP/lVR8UxbKXYA=",
       "System.Collections.wasm": "sha256-PsGCcEw00G2abXlWJrEZSvi1UaOg9gEuMU3/jITEOzI=",
       "System.ComponentModel.wasm": "sha256-Kg+Te+dUBA6OiPS3uVj+Poyamhf9bMlcL96uc+bTYWc=",
@@ -50,7 +50,7 @@
     },
     "satelliteResources": {
       "es": {
-        "Portfolio.resources.wasm": "sha256-cPXA9Hoc+3QYR7epFm2LAGA5Lpjv87lGwQFaoLpNWSQ="
+        "Portfolio.resources.wasm": "sha256-zGWRh3Dia2xfl9XVJ1ex1GYEGOVtix2neSTpSwyoZgk="
       }
     }
   },
