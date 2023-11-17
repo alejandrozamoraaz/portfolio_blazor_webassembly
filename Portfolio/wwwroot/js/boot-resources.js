@@ -4,7 +4,7 @@ Blazor.start({
     loadBootResource: function (type, name, defaultUri, integrity) {
         if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
             return (async function () {
-                const response = await fetch(defaultUri + '.br', { cache: 'no-cache', contentType: 'text/javascript; charset=utf-8' });
+                const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
