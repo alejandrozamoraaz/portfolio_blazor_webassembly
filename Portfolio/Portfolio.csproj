@@ -7,7 +7,8 @@
 
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 
-    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+    <CompressionEnabled>false</CompressionEnabled>
+    
     <BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
   </PropertyGroup>
 
