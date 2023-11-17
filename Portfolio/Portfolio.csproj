@@ -6,8 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-    <RunAOTCompilation>true</RunAOTCompilation>
-    <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
+
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+    <BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
   </PropertyGroup>
 
   <ItemGroup>
