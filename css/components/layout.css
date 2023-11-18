@@ -11,14 +11,24 @@
 }
 
     .layout .top-bar {
-        grid-row: 1;
         position: fixed;
-        z-index: 1000;
+        z-index: 900;
     }
+
+        .layout .top-bar .brand {
+            width: fit-content;
+            height: calc(var(--top-bar-size) - (var(--padding-small) * 2));
+        }
+
+        .layout .top-bar .row .col .actions {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 100%;
+        }
 
     .layout .top-bar, .footer-bar {
         width: 100%;
-        display: flex;
         height: var(--top-bar-size);
         overflow: clip;
         padding: var(--padding-small);
