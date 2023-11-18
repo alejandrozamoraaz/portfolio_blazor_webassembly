@@ -18,7 +18,6 @@
     <link rel="stylesheet" type="text/css" href="css/customization.css" />
 
     <link rel="stylesheet" type="text/css" href="css/components/layout.css" />
-    <link rel="stylesheet" type="text/css" href="css/components/select-culture.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 
@@ -27,20 +26,17 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <div class="loading-progress center-content">
+            <div class="circle border"></div>
+            <img src="icon-192.png" alt="Logo">
+        </div>
     </div>
 
-    <div id="blazor-error-ui" class="color-background border">
-        <div class="content-error">
-            <div class="error-message">
-                <img src="assets/error-80.png" width="80" height="80" alt="Error - imagen de Verazinha en Freepik" />
-                <h3>Ups, Error!</h3>
-            </div>
-            <a href="" class="reload icon-button">
+    <div id="blazor-error-ui" class="color-background border border-radius margin-large">
+        <div class="row vertical-center-items gap">
+            <img src="assets/error-80.png" class="icon-large" alt="Error - imagen de Verazinha en Freepik" />
+            <h3>Ups, Error!</h3>
+            <a href="" class="reload button button-icon">
                 <img class="icon" src="https://img.icons8.com/3d-fluency/94/restart--v1.png" alt="Restart - icon by Icons8" />
             </a>
         </div>

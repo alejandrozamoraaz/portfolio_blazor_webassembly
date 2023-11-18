@@ -15,12 +15,12 @@
     });
 
     function highlightMenuLink(sectionId) {
-        var links = document.querySelectorAll(".layout .navigation a");
+        var links = document.querySelectorAll(".layout .navigation .button");
         links.forEach(function (link) {
             link.classList.remove("active");
         });
 
-        var currentLink = document.querySelector(`.layout .navigation a[href="#${sectionId}"]`);
+        var currentLink = document.querySelector(`.layout .navigation .button[id="#${sectionId}"]`);
         if (currentLink) {
             currentLink.classList.add("active");
         }

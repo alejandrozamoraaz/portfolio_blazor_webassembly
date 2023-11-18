@@ -1,12 +1,14 @@
 ﻿@page "/"
 
-<Section SectionName="Header">
-    <Portfolio.Pages.Sections.Header />
-</Section>
+<div class="col gap-large">
+    <section id="Header" class="gradient-color container-fluid border-radius-large" style="height: 500px;">
+        <Portfolio.Pages.Sections.Header />
+    </section>
 
-@foreach (var item in NavigationService.Navigation)
-{
-    <Section SectionName="@item.LinkName">
-        @item.Content
-    </Section>
-}
+    @foreach (var item in NavigationService.Navigation)
+    {
+        <section id="@item.LinkName" class="container" style="height: 500px;">
+            @item.Content
+        </section>
+    }
+</div>

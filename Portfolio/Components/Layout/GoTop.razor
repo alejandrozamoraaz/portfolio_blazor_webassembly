@@ -1,3 +1,5 @@
-﻿<NavLink title="@CultureDisplay["Top"]" class="float-action button button-icon" href="#Header">
+﻿@inject IJSRuntime JSRuntime
+
+<button @onclick="@(async () => await JSRuntime.InvokeVoidAsync("scrollToSection", "#Header"))" title="@CultureDisplay["Top"]" class="float-action button button-icon">
     <img class="icon" src="assets/icons/go-top-32.png" alt="Arriba - icono de Freepik" />
-</NavLink>
+</button>

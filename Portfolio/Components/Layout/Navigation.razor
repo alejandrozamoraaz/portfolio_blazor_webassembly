@@ -1,10 +1,19 @@
-﻿<div class="navigation color-background">
+﻿@inject IJSRuntime JSRuntime
+
+<div class="navigation color-background">
     @for (int i = 0; i < NavigationService.Navigation.Count; i++)
     {
         var item = NavigationService.Navigation[i];
-        <NavLink href="@("#" + item.LinkName)" class="@("button " + (i == 0 ? "active" : ""))">
+        <button id="@("#" + item.LinkName)" @onclick="async () => await NavigateTo(item.LinkName)" class="@("button " + (i == 0 ? "active" : ""))">
             <img class="icon-large" src="@item.IconUrl" alt="@item.IconAlt" />
             <h6 class="text-small">@item.Name</h6>
-        </NavLink>
+        </button>
     }
 </div>
+
+@code {
+    private async Task NavigateTo(string sectionName)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToSection", "#" + sectionName);
+    }
+}

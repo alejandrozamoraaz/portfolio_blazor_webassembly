@@ -11,6 +11,15 @@ body {
     color: white;
 }
 
+select option {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.loading-progress .circle {
+    border-top: 6px solid #dc9af3;
+}
+
 .primary-color {
     color: var(--primary-color);
 }
@@ -32,14 +41,16 @@ body {
 }
 
 .button {
+    background: none;
+    border: none;
     color: var(--primary-color);
 }
 
-    .button:hover, .active {
+    .button:hover, .active, select:focus {
         color: var(--primary-color-highlight);
     }
 
-        .button-icon:hover, .button-text:hover, .layout .navigation .button:hover > .icon-large, .active > .icon-large {
+        .button-icon:hover, .button-text:hover, .layout .navigation .button:hover > .icon-large, .active > .icon-large, select:focus {
             border: 2px solid var(--primary-color-highlight);
             box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
             background: linear-gradient(to left, #6960fc, #9802cd);
