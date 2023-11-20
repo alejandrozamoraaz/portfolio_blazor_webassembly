@@ -269,20 +269,18 @@ h1:focus {
     border-radius: var(--border-radius-large);
 }
 
-.vertical-center-content {
-    display: flex;
-    justify-content: center;
-}
-
-.vertical-center-items {
+.vertical-center {
     display: flex;
     align-items: center;
 }
 
-.center-content {
+.horizontal-center {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.m-top-large {
+    margin-top: var(--padding-large);
 }
 
 .gap {
@@ -291,22 +289,6 @@ h1:focus {
 
 .gap-large {
     gap: var(--padding-large);
-}
-
-.margin {
-    margin: var(--padding-normal);
-}
-
-.margin-large {
-    margin: var(--padding-large);
-}
-
-.padding {
-    padding: var(--padding-normal);
-}
-
-.padding-large {
-    padding: var(--padding-large);
 }
 
 .image {
