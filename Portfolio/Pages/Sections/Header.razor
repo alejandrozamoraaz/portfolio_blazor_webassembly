@@ -1,17 +1,35 @@
 ﻿@inject IJSRuntime JSRuntime
 
 <div class="row">
-    <div class="col col-9 vertical-center-content">
+    <div class="col col-8" style="z-index: 20; align-self: center">
         <h3 class="text">Ing.</h3>
         <h1 class="text-title font-bold">Junior Alejandro Zamora</h1>
-        <h3 class="text">@CultureDisplay["IAM"]</h3>
+
+        <h3 class="text m-top-large">@CultureDisplay["IAM"]</h3>
         <h2 class="text-large">
             <span id="writing-text"></span>
             <span id="console">|</span>
         </h2>
+
+        <div class="row m-top-large gap">
+            <a class="button button-icon" href="https://github.com/alejandrozamoraaz" target="_blank">
+                <img class="icon" src="https://img.icons8.com/3d-fluency/94/github.png" alt="Github - icon by Icons8" />
+            </a>
+            <a class="button button-icon" href="https://www.linkedin.com/in/alejandrozamoraaz" target="_blank">
+                <img class="icon" src="https://img.icons8.com/3d-fluency/94/linkedin.png" />
+            </a>
+            <a class="button button-icon" href="https://www.instagram.com/alejandrozamoraaz" target="_blank">
+                <img class="icon" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+            </a>
+            <a class="button button-icon" href="https://www.facebook.com/alejandrozamoraaz" target="_blank">
+                <img class="icon" src="https://img.icons8.com/3d-fluency/94/facebook-circled.png" />
+            </a>
+        </div>
     </div>
-    <div class="col col-3 center-content">
-        <img src="icon-192.png" alt="logo" class="image" />
+    <div class="col col-4 vertical-center horizontal-center">
+        <div class="parallax-card border-radius" style="right: 54px">
+            <img class="parallax-item image" style="min-width: 200px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" />
+        </div>
     </div>
 </div>
 
@@ -23,6 +41,7 @@
             List<string> words = new() { CultureDisplay["Developer"], CultureDisplay["Designer"], CultureDisplay["Engineer"] };
 
             await JSRuntime.InvokeVoidAsync("consoleText", words);
+            await JSRuntime.InvokeVoidAsync("initMouseMoveParallax");
         }
     }
 }

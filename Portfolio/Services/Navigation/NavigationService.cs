@@ -10,9 +10,10 @@ public class NavigationService : INavigationService
     public NavigationService(IStringLocalizer<Resources.Culture> localizer)
     {
         cultureDisplay = localizer;
-        Navigation = new List<NavigationRecord>
-        {
-            new () {
+        Navigation =
+        [
+            new()
+            {
                 Name = cultureDisplay["Projects"],
                 IconUrl = "https://img.icons8.com/3d-fluency/94/news.png",
                 IconAlt = "Noticias - icon by Icons8",
@@ -23,7 +24,8 @@ public class NavigationService : INavigationService
                     builder.CloseComponent();
                 }
             },
-            new () {
+            new()
+            {
                 Name = cultureDisplay["About"],
                 IconUrl = "https://img.icons8.com/3d-fluency/94/user-male--v4.png",
                 IconAlt = "Usuario masculino - icon by Icons8",
@@ -34,7 +36,8 @@ public class NavigationService : INavigationService
                     builder.CloseComponent();
                 }
             },
-            new () {
+            new()
+            {
                 Name = cultureDisplay["Contact"],
                 IconUrl = "https://img.icons8.com/3d-fluency/94/chat.png",
                 IconAlt = "Charla - icon by Icons8",
@@ -45,6 +48,6 @@ public class NavigationService : INavigationService
                     builder.CloseComponent();
                 }
             }
-        };
+        ];
     }
 }

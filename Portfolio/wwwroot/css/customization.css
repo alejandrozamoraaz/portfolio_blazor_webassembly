@@ -17,7 +17,8 @@ select option {
 }
 
 .loading-progress .circle {
-    border-top: 6px solid #dc9af3;
+    border: 6px solid var(--primary-color);
+    border-top: 6px solid var(--primary-color-highlight);
 }
 
 .primary-color {
@@ -38,6 +39,11 @@ select option {
 
 .border {
     box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
+}
+
+.parallax-card {
+    border: 2px solid #fff;
+    box-shadow: 0px 10px 20px 20px rgba(0,0,0,0.17);
 }
 
 .button {

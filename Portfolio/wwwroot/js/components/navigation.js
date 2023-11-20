@@ -1,5 +1,9 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+﻿window.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
+        highlightVisibleSection();
+    });
+
+    function highlightVisibleSection() {
         var sections = document.querySelectorAll("section");
         var scrollPosition = window.scrollY;
 
@@ -12,7 +16,7 @@
         if (currentSection) {
             highlightMenuLink(currentSection.id);
         }
-    });
+    }
 
     function highlightMenuLink(sectionId) {
         var links = document.querySelectorAll(".layout .navigation .button");

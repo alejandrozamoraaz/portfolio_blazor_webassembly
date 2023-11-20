@@ -51,6 +51,7 @@
     .layout .navigation {
         position: fixed;
         display: flex;
+        z-index: 900;
         gap: var(--padding-normal);
         justify-content: space-evenly;
         transition: transform 0.5s ease;
