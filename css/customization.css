@@ -1,4 +1,4 @@
-﻿:root {
+﻿:scope {
     --background-color: #151515;
     --surface-color: #292929;
     --primary-color: #9802cd;
@@ -29,8 +29,12 @@ select option {
     color: var(--secondary-color);
 }
 
-.color-background {
+.background-color {
     background-color: var(--background-color);
+}
+
+.surface-color {
+    background-color: var(--surface-color);
 }
 
 .gradient-color {
@@ -56,7 +60,7 @@ select option {
         color: var(--primary-color-highlight);
     }
 
-        .button-icon:hover, .button-text:hover, .layout .navigation .button:hover > .icon-large, .active > .icon-large, select:focus {
+        .button-icon:hover, .button-text:hover, .layout .navigation-bar .button:hover > .icon-large, .active > .icon-large, select:focus {
             border: 2px solid var(--primary-color-highlight);
             box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
             background: linear-gradient(to left, #6960fc, #9802cd);

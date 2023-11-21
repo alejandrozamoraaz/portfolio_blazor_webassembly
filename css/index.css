@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");*/
 
 @font-face {
     font-family: 'FontNormal';
@@ -19,14 +19,14 @@
     --padding-small: 8px;
     --padding-normal: 16px;
     --padding-large: 24px;
-    --border-radius-small: 8px;
-    --border-radius-normal: 16px;
-    --border-radius-large: 32px;
 }
 
 :scope {
+    --border-radius: 16px;
+    --border-radius-large: 32px;
     --button-size: 32px;
-    --icon-size: 24px;
+    --button-icon-size: 42px;
+    --icon-size: 32px;
     --icon-size-large: 48px;
     --font-size-title: 3em;
     --font-size-large: 32px;
@@ -92,12 +92,17 @@ h1:focus {
     font-family: 'FontBold', monospace;
 }
 
+.image {
+    max-width: 100%;
+    height: auto
+}
+
 .button {
     cursor: pointer;
     display: flex;
     justify-content: center;
     text-decoration: none;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius);
     text-align: center;
     align-items: center;
     overflow: hidden;
@@ -115,8 +120,8 @@ h1:focus {
 }
 
 .button-icon {
-    width: var(--button-size);
-    height: var(--button-size);
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
     padding: var(--padding-small);
     transition: all 0.1s ease;
 }
@@ -131,15 +136,14 @@ h1:focus {
     height: var(--icon-size-large);
     transition: all 0.1s ease;
 }
-
+/*
 .icon-font {
     font-size: var(--icon-size);
 }
 
 .icon-font-large {
     font-size: var(--icon-size-large);
-    transition: all 0.1s ease;
-}
+}*/
 
 .text-small {
     font-size: var(--font-size-small);
@@ -195,6 +199,10 @@ h1:focus {
     }
 }
 
+.max-height {
+    height: 100%;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -205,7 +213,6 @@ h1:focus {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
 }
 
 .col {
@@ -262,7 +269,7 @@ h1:focus {
 }
 
 .border-radius {
-    border-radius: var(--border-radius-normal);
+    border-radius: var(--border-radius);
 }
 
 .border-radius-large {
@@ -279,7 +286,27 @@ h1:focus {
     justify-content: center;
 }
 
-.m-top-large {
+.p-x {
+    padding-right: var(--padding-normal);
+    padding-left: var(--padding-normal);
+}
+
+.p-y {
+    padding-top: var(--padding-normal);
+    padding-bottom: var(--padding-normal);
+}
+
+.m-x-large {
+    margin-right: var(--padding-large);
+    margin-left: var(--padding-large);
+}
+
+.m-y-large {
+    margin-top: var(--padding-large);
+    margin-bottom: var(--padding-large);
+}
+
+.m-t-large {
     margin-top: var(--padding-large);
 }
 
@@ -289,9 +316,4 @@ h1:focus {
 
 .gap-large {
     gap: var(--padding-large);
-}
-
-.image {
-    max-width: 100%;
-    height: auto
 }

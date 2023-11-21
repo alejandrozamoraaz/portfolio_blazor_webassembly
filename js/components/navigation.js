@@ -6,10 +6,16 @@
     function highlightVisibleSection() {
         var sections = document.querySelectorAll("section");
         var scrollPosition = window.scrollY;
+        var appbarHeight = document.querySelector(".top-bar").offsetHeight;
+        var footerHeight = document.querySelector(".footer-bar").offsetHeight;
+        var isMobilePortrait = window.innerWidth < 767;
+
+        var bottomNavHeight = isMobilePortrait ? document.querySelector(".navigation-bar").offsetHeight : 0;
 
         var currentSection = Array.from(sections).find(function (section) {
-            var top = section.offsetTop;
-            var bottom = top + section.offsetHeight;
+            var top = section.offsetTop - appbarHeight;
+            var bottom = top - bottomNavHeight - footerHeight + section.offsetHeight;
+
             return scrollPosition >= top && scrollPosition < bottom;
         });
 
@@ -19,21 +25,27 @@
     }
 
     function highlightMenuLink(sectionId) {
-        var links = document.querySelectorAll(".layout .navigation .button");
+        var links = document.querySelectorAll(".layout .navigation-bar .button");
         links.forEach(function (link) {
             link.classList.remove("active");
         });
 
-        var currentLink = document.querySelector(`.layout .navigation .button[id="#${sectionId}"]`);
+        var currentLink = document.querySelector(`.layout .navigation-bar .button[id="#${sectionId}"]`);
         if (currentLink) {
             currentLink.classList.add("active");
         }
     }
 
-    window.scrollToSection = function (selector) {
-        var element = document.querySelector(selector);
+    window.scrollToSection = function (section) {
+        var element = document.getElementById(section);
+
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            var appbarHeight = document.querySelector(".top-bar").offsetHeight;
+
+            window.scrollTo({
+                top: element.offsetTop - appbarHeight,
+                behavior: 'smooth'
+            });
         }
     };
 });
