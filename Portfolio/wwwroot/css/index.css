@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");*/
 
 @font-face {
     font-family: 'FontNormal';
@@ -199,6 +199,10 @@ h1:focus {
     }
 }
 
+.max-height {
+    height: 100%;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -209,7 +213,6 @@ h1:focus {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
 }
 
 .col {
@@ -288,7 +291,22 @@ h1:focus {
     padding-left: var(--padding-normal);
 }
 
-.m-top-large {
+.p-y {
+    padding-top: var(--padding-normal);
+    padding-bottom: var(--padding-normal);
+}
+
+.m-x-large {
+    margin-right: var(--padding-large);
+    margin-left: var(--padding-large);
+}
+
+.m-y-large {
+    margin-top: var(--padding-large);
+    margin-bottom: var(--padding-large);
+}
+
+.m-t-large {
     margin-top: var(--padding-large);
 }
 
