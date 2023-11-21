@@ -4,7 +4,7 @@
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 
-<select @bind="CurrentCulture" aria-label="Culture" class="button button-text" style="padding: 0;">
+<select id="select-culture" @bind="CurrentCulture" aria-label="Culture" class="button button-text" style="padding: 0;">
     @foreach (var culture in Culture.SupportedCultures)
     {
         <option value="@culture.Code">@culture.Display</option>

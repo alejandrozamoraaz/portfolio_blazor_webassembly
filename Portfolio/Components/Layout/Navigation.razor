@@ -1,12 +1,11 @@
 ﻿@inject IJSRuntime JSRuntime
 
-<div class="navigation color-background">
-    @for (int i = 0; i < NavigationService.Navigation.Count; i++)
+<div class="navigation-bar background-color">
+    @foreach (var section in NavigationService.Navigation)
     {
-        var item = NavigationService.Navigation[i];
-        <button id="@("#" + item.LinkName)" @onclick="async () => await NavigateTo(item.LinkName)" class="@("button " + (i == 0 ? "active" : ""))">
-            <img class="icon-large" src="@item.IconUrl" alt="@item.IconAlt" />
-            <h6 class="text-small">@item.Name</h6>
+        <button id="@("#" + section.LinkName)" type="button" @onclick="async () => await NavigateTo(section.LinkName)" class="button">
+            <img class="icon-large" src="@(section.IconUrl)" alt="@(section.IconAlt)" />
+            <h6 class="text-small">@(section.Name)</h6>
         </button>
     }
 </div>
@@ -14,6 +13,6 @@
 @code {
     private async Task NavigateTo(string sectionName)
     {
-        await JSRuntime.InvokeVoidAsync("scrollToSection", "#" + sectionName);
+        await JSRuntime.InvokeVoidAsync("scrollToSection", sectionName);
     }
 }
