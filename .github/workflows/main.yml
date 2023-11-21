@@ -30,11 +30,11 @@ jobs:
         run: dotnet publish -c Release
 
       - name: Rewrite base tag
-        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.REPOSITORY_NAME }}\/" \/>/g' /home/runner/work/Portfolio/Portfolio/Portfolio/bin/Release/net8.0/publish/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/${{ env.REPOSITORY_NAME }}\/" \/>/g' /home/runner/work/portfolio/portfolio/Portfolio/bin/Release/net8.0/publish/wwwroot/index.html
 
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4 
         with:
           branch: ${{ env.BRANCH_NAME }}
-          folder: /home/runner/work/Portfolio/Portfolio/Portfolio/bin/Release/net8.0/publish/wwwroot
+          folder: /home/runner/work/portfolio/portfolio/Portfolio/bin/Release/net8.0/publish/wwwroot
           clean: true      
