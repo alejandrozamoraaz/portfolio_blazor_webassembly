@@ -1,6 +1,6 @@
 ﻿:scope {
     --top-bar-size: 64px;
-    --navigation-bar-size: 80px;
+    --navigation-bar-size: 64px;
 }
 
 .layout {
@@ -15,22 +15,33 @@
     }
 
         .layout .top-bar .brand {
-            width: fit-content;
-            height: calc(var(--top-bar-size) - (var(--padding-small) * 2));
+            width: 56px;
+            height: 56px;
+            padding: 0 3px;
         }
+
+            .layout .top-bar .brand > :first-child {
+                transform-origin: center;
+                transition: transform 1s;
+            }
+
+            .layout .top-bar .brand:hover > :first-child {
+                transform: rotate(-180deg);
+            }
+
+            .layout .top-bar .brand:not(:hover) > :first-child {
+                transform: rotate(0deg);
+            }
 
         .layout .top-bar .row .col .actions {
             display: flex;
             justify-content: end;
-            align-items: center;
-            height: 100%;
         }
 
     .layout .top-bar, .footer-bar {
         width: 100%;
         height: var(--top-bar-size);
         overflow: clip;
-        padding: var(--padding-small);
     }
 
     .layout main {
@@ -65,11 +76,11 @@
             height: 100%;
         }
 
-            .layout .navigation-bar .button .icon-large {
+            .layout .navigation-bar .button .icon {
                 border-radius: 50%;
             }
 
-            .active > .icon-large, .layout .navigation-bar .button:hover > .icon-large {
+            .active > .icon, .layout .navigation-bar .button:hover > .icon {
                 transform: scale(0.95);
             }
 

@@ -50,6 +50,12 @@ select option {
     box-shadow: 0px 10px 20px 20px rgba(0,0,0,0.17);
 }
 
+.brand {
+    box-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color);
+    border-radius: 50%;
+    background: linear-gradient(to left, #6960fc33, #9802cd33);
+}
+
 .button {
     background: none;
     border: none;
@@ -60,7 +66,7 @@ select option {
         color: var(--primary-color-highlight);
     }
 
-        .button-icon:hover, .button-text:hover, .layout .navigation-bar .button:hover > .icon-large, .active > .icon-large, select:focus {
+        .button-icon:hover, .button-text:hover, .layout .navigation-bar .button:hover > .icon, .active > .icon, select:focus {
             border: 2px solid var(--primary-color-highlight);
             box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
             background: linear-gradient(to left, #6960fc, #9802cd);
