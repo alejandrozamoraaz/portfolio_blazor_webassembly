@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 
-using Portfolio;
+using Portfolio.Components;
 using Portfolio.Resources;
 using Portfolio.Services.Navigation;
 using Portfolio.Services.Projects;

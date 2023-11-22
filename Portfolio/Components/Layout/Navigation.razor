@@ -4,7 +4,7 @@
     @foreach (var section in NavigationService.Navigation)
     {
         <button id="@("#" + section.LinkName)" type="button" @onclick="async () => await NavigateTo(section.LinkName)" class="button">
-            <img class="icon-large" src="@(section.IconUrl)" alt="@(section.IconAlt)" />
+            <img class="icon" src="@(section.IconUrl)" alt="@(section.IconAlt)" />
             <h6 class="text-small">@(section.Name)</h6>
         </button>
     }

@@ -20,7 +20,7 @@ public class NavigationService : INavigationService
                 LinkName = "Projects",
                 Content = builder =>
                 {
-                    builder.OpenComponent<Pages.Sections.Projects>(0);
+                    builder.OpenComponent<Components.Pages.Sections.Projects>(0);
                     builder.CloseComponent();
                 }
             },
@@ -32,7 +32,7 @@ public class NavigationService : INavigationService
                 LinkName = "About",
                 Content = builder =>
                 {
-                    builder.OpenComponent<Pages.Sections.About>(0);
+                    builder.OpenComponent<Components.Pages.Sections.About>(0);
                     builder.CloseComponent();
                 }
             },
@@ -44,7 +44,7 @@ public class NavigationService : INavigationService
                 LinkName = "Contact",
                 Content = builder =>
                 {
-                    builder.OpenComponent<Pages.Sections.Contact>(0);
+                    builder.OpenComponent<Components.Pages.Sections.Contact>(0);
                     builder.CloseComponent();
                 }
             }
