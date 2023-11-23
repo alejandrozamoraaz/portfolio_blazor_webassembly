@@ -40,6 +40,15 @@ h1:focus {
     outline: none;
 }
 
+ul {
+    list-style: none;
+    padding: 0 var(--padding-normal);
+}
+
+li {
+    margin-bottom: var(--padding-normal);
+}
+
 #blazor-error-ui {
     display: none;
     z-index: 1000;
@@ -126,6 +135,8 @@ h1:focus {
 
 .text {
     font-size: var(--font-size-text);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 .text-large {
@@ -247,6 +258,14 @@ h1:focus {
     border-radius: var(--border-radius-large);
 }
 
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .vertical-center {
     display: flex;
     align-items: center;
@@ -289,6 +308,10 @@ h1:focus {
 
 .m-t-large {
     margin-top: var(--padding-large);
+}
+
+.m-b-large {
+    margin-bottom: var(--padding-large);
 }
 
 .gap {

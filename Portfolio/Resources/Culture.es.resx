@@ -120,8 +120,29 @@
   <data name="About" xml:space="preserve">
     <value>Acerca de</value>
   </data>
+  <data name="About01" xml:space="preserve">
+    <value>Junior Alejandro Zamora es un profesional altamente comprometido con la excelencia y la evolución constante. Su enfoque vanguardista lo posiciona como un aprendiz incansable,
+siempre inmerso en las últimas tecnologías y disciplinas para su crecimiento tanto personal como profesional.</value>
+  </data>
+  <data name="About02" xml:space="preserve">
+    <value>En la búsqueda constante de la excelencia,
+se destaca como un ingeniero versátil, hábil en el diseño, desarrollo de software, realidad virtual y aumentada, así como en el análisis de datos y tecnologías emergentes.</value>
+  </data>
+  <data name="About03" xml:space="preserve">
+    <value>Su pasión por la creación de experiencias interactivas lo impulsa a explorar nuevas posibilidades en el campo de la tecnología. Con una mentalidad ágil y una dedicación inquebrantable a la calidad,
+Zamora está preparado para colaborar en proyectos desafiantes y emocionantes, aportando creatividad y versatilidad a cada tarea que emprende.</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contactar</value>
+  </data>
+  <data name="DataAnalyticsAI" xml:space="preserve">
+    <value>Análisis de Datos e IA</value>
+  </data>
+  <data name="DataAnalyticsAI01" xml:space="preserve">
+    <value>Posee sólidos conocimientos en bases de datos y técnicas de análisis de datos, trazando su camino hacia la especialización como científico de datos.</value>
+  </data>
+  <data name="DataAnalyticsAI02" xml:space="preserve">
+    <value>Demuestra experiencia en el uso de Python para la implementación de inteligencia artificial, redes neuronales y herramientas asociadas.</value>
   </data>
   <data name="Designer" xml:space="preserve">
     <value>Diseñador</value>
@@ -132,14 +153,41 @@
   <data name="Engineer" xml:space="preserve">
     <value>Ingeniero</value>
   </data>
+  <data name="FullStackDevelopment" xml:space="preserve">
+    <value>Desarrollo Full Stack</value>
+  </data>
+  <data name="FullStackDevelopment01" xml:space="preserve">
+    <value>Exhibe habilidades sólidas en .Net Core, CSS, Bootstrap, JavaScript y C# para concebir aplicaciones web robustas y eficientes.</value>
+  </data>
+  <data name="FullStackDevelopment02" xml:space="preserve">
+    <value>Implementa metodologías ágiles en el desarrollo de software empresarial, asegurando la adaptabilidad a cambios y la entrega de resultados excepcionales en proyectos colaborativos.</value>
+  </data>
+  <data name="FullStackDevelopment03" xml:space="preserve">
+    <value>Maneja con destreza herramientas como Android Studio, Kotlin, Jetpack Compose, MAUI, Java y Flutter, destacándose en el desarrollo de aplicaciones móviles modernas y escalables.</value>
+  </data>
+  <data name="FullStackDevelopment04" xml:space="preserve">
+    <value>Ostenta la insignia de Desarrollador Junior en Unity, respaldando su capacidad para crear videojuegos, experiencias de realidad virtual y aumentada.</value>
+  </data>
+  <data name="GraphicDesignUIUX" xml:space="preserve">
+    <value>Diseño gráfico, UI &amp; UX</value>
+  </data>
+  <data name="GraphicDesignUIUX01" xml:space="preserve">
+    <value>Demuestra maestría en el uso de Figma y XD para la creación de interfaces intuitivas y estéticamente atractivas.</value>
+  </data>
   <data name="IAM" xml:space="preserve">
     <value>Yo soy</value>
   </data>
   <data name="PortfolioTitle" xml:space="preserve">
     <value>Portafolio de Junior Alejandro Zamora</value>
   </data>
+  <data name="ProfessionalExperience" xml:space="preserve">
+    <value>Experiencia Profesional</value>
+  </data>
   <data name="Projects" xml:space="preserve">
     <value>Proyectos</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Habilidades</value>
   </data>
   <data name="Top" xml:space="preserve">
     <value>Subir</value>

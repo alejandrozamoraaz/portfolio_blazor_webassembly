@@ -1,5 +1,60 @@
-﻿<h3>About</h3>
+﻿<div class="text text-justify m-b-large">
+    <p>@CultureDisplay["About01"]</p>
+    <p class="m-y-large">@CultureDisplay["About02"]</p>
+    <p>@CultureDisplay["About03"]</p>
+</div>
 
-@code {
+<h1 class="primary-text-color m-y-large">@CultureDisplay["ProfessionalExperience"]</h1>
+<div>
+    <h3 class="secondary-text-color">@CultureDisplay["GraphicDesignUIUX"]</h3>
+    <ul class="text text-justify">
+        <li>@CultureDisplay["GraphicDesignUIUX01"]</li>
+    </ul>
+    <h3 class="secondary-text-color m-t-large">@CultureDisplay["FullStackDevelopment"]</h3>
+    <ul class="text text-justify">
+        <li>@CultureDisplay["FullStackDevelopment01"]</li>
+        <li>@CultureDisplay["FullStackDevelopment02"]</li>
+        <li>@CultureDisplay["FullStackDevelopment03"]</li>
+        <li>@CultureDisplay["FullStackDevelopment04"]</li>
+    </ul>
+    <h3 class="secondary-text-color">@CultureDisplay["DataAnalyticsAI"]</h3>
+    <ul class="text text-justify">
+        <li>@CultureDisplay["DataAnalyticsAI01"]</li>
+        <li>@CultureDisplay["DataAnalyticsAI02"]</li>
+    </ul>
+</div>
 
+<h1 class="primary-text-color m-t-large">@CultureDisplay["Skills"]</h1>
+<div class="m-y-large grid-skills gap text-center text-small">
+    @foreach (var skill in Skills)
+    {
+        <div class="grid-skills-item p-x-small p-y-small border-radius vertical-center horizontal-center">
+            <p>@skill</p>
+        </div>
+    }
+</div>
+
+@code
+{
+    List<string> Skills => new()
+    {
+        "Figma",
+        "XD",
+        ".Net Core",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "C#",
+        "Android Studio",
+        "Kotlin",
+        "Jetpack Compose",
+        "MAUI",
+        "Java",
+        "Flutter",
+        "Unity",
+        "Power BI",
+        "DB",
+        "Python",
+        "AI"
+    };
 }

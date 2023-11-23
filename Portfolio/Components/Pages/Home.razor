@@ -1,13 +1,13 @@
 ﻿@page "/"
 
 <div class="col gap-large">
-    <section id="Header" class="gradient-color container-fluid border-radius-large vertical-center" style="height: 500px;">
+    <section id="Header" class="gradient-background-color container-fluid border-radius-large vertical-center" style="height: 500px;">
         <Portfolio.Components.Pages.Sections.Header />
     </section>
 
     @foreach (var item in NavigationService.Navigation)
     {
-        <section id="@item.LinkName" class="container surface-color border-radius-large p-y p-x" style="height: 700px;">
+        <section id="@item.LinkName" class="container surface-background-color border-radius-large p-y p-x">
             <div class="row vertical-center m-y-large gap">
                 <img class="icon-large" src="@item.IconUrl" alt="@item.IconAlt" />
                 <h3 class="text-large">@item.Name</h3>

@@ -21,23 +21,31 @@ select option {
     border-top: 6px solid var(--primary-color-highlight);
 }
 
-.primary-color {
+.primary-text-color {
     color: var(--primary-color);
 }
 
-.secondary-color {
+.secondary-text-color {
     color: var(--secondary-color);
+}
+
+.primary-background-color {
+    background-color: var(--primary-color);
+}
+
+.secondary-background-color {
+    background-color: var(--secondary-color);
 }
 
 .background-color {
     background-color: var(--background-color);
 }
 
-.surface-color {
+.surface-background-color {
     background-color: var(--surface-color);
 }
 
-.gradient-color {
+.gradient-background-color {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
@@ -71,3 +79,18 @@ select option {
             box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
             background: linear-gradient(to left, #6960fc, #9802cd);
         }
+
+.grid-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 52px;
+    width: 100%;
+}
+
+.grid-skills-item {
+    border: 2px solid var(--primary-color-highlight);
+}
+
+    .grid-skills-item:hover {
+        box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
+    }
