@@ -321,3 +321,14 @@ li {
 .gap-large {
     gap: var(--padding-large);
 }
+
+.grid {
+    display: grid;
+    max-width: 100%;
+    grid-gap: var(--padding-normal);
+}
+
+.grid-small-items {
+    grid-auto-rows: var(--icon-size-large);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

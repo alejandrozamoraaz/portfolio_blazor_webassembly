@@ -80,17 +80,10 @@ select option {
             background: linear-gradient(to left, #6960fc, #9802cd);
         }
 
-.grid-skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 52px;
-    width: 100%;
-}
-
-.grid-skills-item {
+.skills-item {
     border: 2px solid var(--primary-color-highlight);
 }
 
-    .grid-skills-item:hover {
+    .skills-item:hover {
         box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
     }
