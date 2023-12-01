@@ -4,12 +4,10 @@ namespace Portfolio.Services.Navigation;
 
 public class NavigationService : INavigationService
 {
-    private readonly IStringLocalizer<Resources.Culture> cultureDisplay;
     public List<NavigationRecord> Navigation { get; }
 
-    public NavigationService(IStringLocalizer<Resources.Culture> localizer)
+    public NavigationService(IStringLocalizer<Resources.Culture> cultureDisplay)
     {
-        cultureDisplay = localizer;
         Navigation =
         [
             new()

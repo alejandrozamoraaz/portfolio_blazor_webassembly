@@ -4,6 +4,5 @@ namespace Portfolio.Services.Projects;
 
 public interface IProjectsService
 {
-    List<ProjectTypeEntity>? ProjectTypes { get; protected set; }
-    void GetProjectsByType();
+    List<ProjectTypeEntity> ProjectTypes { get; }
 }

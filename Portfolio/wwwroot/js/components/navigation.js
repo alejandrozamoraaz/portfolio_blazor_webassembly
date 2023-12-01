@@ -1,20 +1,51 @@
-﻿window.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("scroll", function () {
-        highlightVisibleSection();
-    });
+﻿document.addEventListener("DOMContentLoaded", function () {
+    const highlightMenuLink = (sectionId) => {
+        const links = document.querySelectorAll(".layout .navigation-bar .button");
+        links.forEach((link) => link.classList.remove("active"));
 
-    function highlightVisibleSection() {
-        var sections = document.querySelectorAll("section");
-        var scrollPosition = window.scrollY;
-        var appbarHeight = document.querySelector(".top-bar").offsetHeight;
-        var footerHeight = document.querySelector(".footer-bar").offsetHeight;
-        var isMobilePortrait = window.innerWidth < 767;
+        const currentLink = document.querySelector(`.layout .navigation-bar .button[id="#${sectionId}"]`);
+        if (currentLink) {
+            currentLink.classList.add("active");
+        }
+    };
 
-        var bottomNavHeight = isMobilePortrait ? document.querySelector(".navigation-bar").offsetHeight : 0;
+    const scrollToSection = (section) => {
+        const element = document.getElementById(section);
 
-        var currentSection = Array.from(sections).find(function (section) {
-            var top = section.offsetTop - appbarHeight;
-            var bottom = top - bottomNavHeight - footerHeight + section.offsetHeight;
+        if (element) {
+            const appbar = document.querySelector(".top-bar");
+
+            window.scrollTo({
+                top: element.offsetTop - appbar.offsetHeight,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const highlightVisibleSection = () => {
+        const sections = document.querySelectorAll("section");
+        const footer = document.querySelector(".footer-bar");
+        const footerHeight = footer.offsetHeight;
+
+        const isMobilePortrait = window.innerWidth < 767;
+        const navigationBar = document.querySelector(".navigation-bar");
+        const bottomNavHeight = isMobilePortrait ? navigationBar.offsetHeight : 0;
+
+        const appbar = document.querySelector(".top-bar");
+
+        const scrollPosition = window.scrollY;
+
+        const lastSection = sections[sections.length - 1];
+        const bottomLastSection = lastSection.offsetTop - appbar.offsetHeight - bottomNavHeight - footerHeight;
+
+        if (scrollPosition >= bottomLastSection) {
+            highlightMenuLink(lastSection.id);
+            return;
+        }
+
+        const currentSection = Array.from(sections).find((section) => {
+            const top = section.offsetTop - appbar.offsetHeight;
+            const bottom = top - bottomNavHeight - footerHeight + section.offsetHeight;
 
             return scrollPosition >= top && scrollPosition < bottom;
         });
@@ -22,30 +53,8 @@
         if (currentSection) {
             highlightMenuLink(currentSection.id);
         }
-    }
-
-    function highlightMenuLink(sectionId) {
-        var links = document.querySelectorAll(".layout .navigation-bar .button");
-        links.forEach(function (link) {
-            link.classList.remove("active");
-        });
-
-        var currentLink = document.querySelector(`.layout .navigation-bar .button[id="#${sectionId}"]`);
-        if (currentLink) {
-            currentLink.classList.add("active");
-        }
-    }
-
-    window.scrollToSection = function (section) {
-        var element = document.getElementById(section);
-
-        if (element) {
-            var appbarHeight = document.querySelector(".top-bar").offsetHeight;
-
-            window.scrollTo({
-                top: element.offsetTop - appbarHeight,
-                behavior: 'smooth'
-            });
-        }
     };
+
+    window.addEventListener("scroll", highlightVisibleSection);
+    window.scrollToSection = scrollToSection;
 });

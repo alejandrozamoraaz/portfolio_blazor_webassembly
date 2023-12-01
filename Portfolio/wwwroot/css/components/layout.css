@@ -1,6 +1,6 @@
 ﻿:scope {
     --top-bar-size: 64px;
-    --navigation-bar-size: 68px;
+    --navigation-bar-size: 76px;
 }
 
 .layout {
@@ -41,7 +41,7 @@
     .layout .top-bar, .footer-bar {
         width: 100%;
         height: var(--top-bar-size);
-        overflow: clip;
+        overflow: hidden;
     }
 
     .layout main {
@@ -65,8 +65,7 @@
         gap: var(--padding-normal);
         justify-content: space-evenly;
         transition: transform 0.5s ease;
-        overflow-wrap: anywhere;
-        overflow: clip;
+        overflow: hidden;
     }
 
         .layout .navigation-bar .button {

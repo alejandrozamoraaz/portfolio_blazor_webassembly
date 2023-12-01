@@ -1,42 +1,33 @@
-﻿@using Portfolio.Services.Projects;
-@inject IProjectsService Service
+﻿@using Portfolio.Services.Projects
 
-@CultureDisplay["Projects"]
+@inject IProjectsService Service
+@* @inject IJSRuntime JSRuntime *@
+
+<div class="row horizontal-center vertical-center">
+    <img width="300" height="341" src="https://pngimg.com/uploads/under_construction/under_construction_PNG4.png" />
+</div>
+
+@* @foreach (var type in Service.ProjectTypes)
+{
+    <h1 class="primary-text-color m-y-large">@type.Type</h1>
+
+    <div class="grid grid-items">
+        @foreach (var project in type.Projects)
+        {
+            <ProjectCard Project="@project" />
+        }
+    </div>
+}
+ *@
 
 @*
-@if (Service.ProjectTypes is null)
-{
-    <p><em>Loading...</em></p>
-}
-else if (Service.ProjectTypes.Count == 0)
-{
-    <p>Sin proyectos</p>
-}
-else
-{
-    <table class="table">
-        @foreach (var type in Service.ProjectTypes)
-        {
-            <tr>
-                <td colspan="2"><h3>@type.Type</h3></td>
-            </tr>
-
-            @foreach (var project in type.Projects)
-            {
-                <tr>
-                    <td><h4>@project.Title</h4></td>
-                    <td><p>@project.Description</p></td>
-                </tr>
-            }
-        }
-    </table>
-} *@
-
-
-
 @code {
-    protected override void OnInitialized()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        Service.GetProjectsByType();
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("configureCarousel");
+        }
     }
 }
+ *@

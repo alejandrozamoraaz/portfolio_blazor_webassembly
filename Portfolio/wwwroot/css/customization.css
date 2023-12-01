@@ -17,8 +17,14 @@ select option {
 }
 
 .loading-progress .circle {
-    border: 6px solid var(--primary-color);
-    border-top: 6px solid var(--primary-color-highlight);
+    border: 3px solid var(--primary-color);
+    border-top: 3px solid var(--primary-color-highlight);
+}
+
+.brand, .loading-progress .circle {
+    box-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color);
+    border-radius: 50%;
+    background: linear-gradient(to left, #6960fc33, #9802cd33);
 }
 
 .primary-text-color {
@@ -46,23 +52,16 @@ select option {
 }
 
 .gradient-background-color {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-.border {
-    box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
-}
-
-.parallax-card {
-    border: 2px solid #fff;
-    box-shadow: 0px 10px 20px 20px rgba(0,0,0,0.17);
-}
-
-.brand {
-    box-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color);
-    border-radius: 50%;
     background: linear-gradient(to left, #6960fc33, #9802cd33);
 }
+
+.card-border {
+    border: 2px solid var(--primary-color-highlight);
+}
+
+    .card-border:hover {
+        box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
+    }
 
 .button {
     background: none;
@@ -79,11 +78,3 @@ select option {
             box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
             background: linear-gradient(to left, #6960fc, #9802cd);
         }
-
-.skills-item {
-    border: 2px solid var(--primary-color-highlight);
-}
-
-    .skills-item:hover {
-        box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
-    }

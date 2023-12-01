@@ -1,60 +1,77 @@
-﻿<div class="text text-justify m-b-large">
-    <p>@CultureDisplay["About01"]</p>
-    <p class="m-y-large">@CultureDisplay["About02"]</p>
-    <p>@CultureDisplay["About03"]</p>
-</div>
+﻿<div class="col col-12">
+    <div class="text m-b-large">
+        <p>@CultureDisplay["About01"]</p>
+        <p class="m-t-large">@CultureDisplay["About02"]</p>
+    </div>
 
-<h1 class="primary-text-color m-y-large">@CultureDisplay["ProfessionalExperience"]</h1>
-<div>
-    <h3 class="secondary-text-color">@CultureDisplay["GraphicDesignUIUX"]</h3>
-    <ul class="text text-justify">
-        <li>@CultureDisplay["GraphicDesignUIUX01"]</li>
-    </ul>
-    <h3 class="secondary-text-color m-t-large">@CultureDisplay["FullStackDevelopment"]</h3>
-    <ul class="text text-justify">
-        <li>@CultureDisplay["FullStackDevelopment01"]</li>
-        <li>@CultureDisplay["FullStackDevelopment02"]</li>
-        <li>@CultureDisplay["FullStackDevelopment03"]</li>
-        <li>@CultureDisplay["FullStackDevelopment04"]</li>
-    </ul>
-    <h3 class="secondary-text-color">@CultureDisplay["DataAnalyticsAI"]</h3>
-    <ul class="text text-justify">
-        <li>@CultureDisplay["DataAnalyticsAI01"]</li>
-        <li>@CultureDisplay["DataAnalyticsAI02"]</li>
-    </ul>
-</div>
+    <h1 class="primary-text-color m-t-large">@CultureDisplay["Skills"]</h1>
+    <div class="m-y-large grid grid-small-items text-center text-small">
+        @foreach (var skill in Skills)
+        {
+            <div class="card-border p-x-small p-y-small border-radius vertical-center horizontal-center">
+                <p>@skill</p>
+            </div>
+        }
+    </div>
 
-<h1 class="primary-text-color m-t-large">@CultureDisplay["Skills"]</h1>
-<div class="m-y-large grid grid-small-items text-center text-small">
-    @foreach (var skill in Skills)
-    {
-        <div class="skills-item p-x-small p-y-small border-radius vertical-center horizontal-center">
-            <p>@skill</p>
-        </div>
-    }
+    <h1 class="primary-text-color m-y-large">@CultureDisplay["Badges"]</h1>
+    <div class="grid grid-items">
+        @foreach (var badge in Badges)
+        {
+            <a class="button col" target="_blank" href="@badge.Url">
+                <img height="100" width="100" src="assets/images/badges/@badge.ImageName" />
+                <p class="text-center">@badge.Name</p>
+            </a>
+        }
+    </div>
 </div>
 
 @code
 {
+    record Badge(string Name, string ImageName, string Url);
+    List<Badge> Badges => new()
+    {
+        new(
+            "Unity Junior Programmer",
+            "unity-junior-programmer.png",
+            "https://www.credly.com/badges/f3aec58a-2568-4f4b-9ee3-e98da34986a0/public_url"
+        ),
+        new(
+            "Unity Creative Core",
+            "unity-creative-core.png",
+            "https://www.credly.com/badges/7df6efb7-7279-4130-8bca-48622f240f85/public_url"
+        ),
+        new(
+            "Unity Mobile AR Development",
+            "unity-mobile-ar-development.png",
+            "https://www.credly.com/badges/ab1141eb-2642-4c4d-a6e4-8619dacb2f74/public_url"
+        ),
+        new(
+            "Scrum Foundation Professional Certification",
+            "scrum-foundation-professional-certification-sfpc.png",
+            "https://www.credly.com/badges/c9bea62f-5bdf-4d56-a4de-c83e03745002/public_url"
+        ),
+        new(
+            "AWS Cloud Quest: Cloud Practitioner",
+            "aws-cloud-quest-cloud-practitioner.png",
+            "https://www.credly.com/badges/64706d66-220c-4461-b372-74dbaf3cdafa/public_url"
+        )
+    };
+
     List<string> Skills => new()
     {
         "Figma",
         "XD",
         ".Net Core",
         "CSS",
-        "Bootstrap",
-        "JavaScript",
         "C#",
-        "Android Studio",
         "Kotlin",
         "Jetpack Compose",
-        "MAUI",
-        "Java",
         "Flutter",
         "Unity",
         "Power BI",
-        "DB",
+        "SQL",
         "Python",
-        "AI"
+        "Azure"
     };
 }

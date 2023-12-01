@@ -2,11 +2,11 @@
 
 public class ProjectEntity
 {
-    public required int IdProject { get; set; }
-    public required List<string> ImageURLs { get; set; }
-    public required string Title { get; set; }
-    public required string Description { get; set; }
-    public required int Year { get; set; }
-    public required ProjectTypeEntity Type { get; set; }
-    public required ProjectCategoryEntity Category { get; set; }
+    public required List<string> ImageURLs { get; init; }
+    public required string Title { get; init; }
+    public required string Description { get; init; }
+    public required int Year { get; init; }
+    public string? Url { get; init; }
+    //public required ProjectTypeEntity Type { get; set; }
+    //public required ProjectCategoryEntity Category { get; set; }
 }

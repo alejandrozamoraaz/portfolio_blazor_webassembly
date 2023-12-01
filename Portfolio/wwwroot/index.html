@@ -19,9 +19,15 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/customization.css" />
+    <link rel="stylesheet" type="text/css" href="css/effects.css" />
 
     <link rel="stylesheet" type="text/css" href="css/components/layout.css" />
-    <link rel="stylesheet" type="text/css" href="css/components/parallax.css" />
+
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
 
     <script type="text/javascript" src="js/spa-redirect.js"></script>
 </head>
@@ -29,13 +35,13 @@
 <body>
     <div id="app">
         <div class="loading-progress vertical-center horizontal-center">
-            <div class="circle border"></div>
-            <img src="icon-192.png" alt="Logo">
+            <div class="circle rotate-infinite"></div>
+            <img src="icon-192.png" alt="Logo" class="image">
         </div>
     </div>
 
-    <div id="blazor-error-ui" class="background-color border border-radius m-y-large m-x-large">
-        <div class="row vertical-center gap">
+    <div id="blazor-error-ui" class="background-color border-radius m-y-large m-x-large">
+        <div class="row vertical-center gap p-x">
             <img src="https://img.icons8.com/3d-fluency/94/broken-robot.png" class="icon-large" alt="Error - icon by Icons8" />
             <h3>Ups, Error!</h3>
             <a href="" class="reload button button-icon">
@@ -47,10 +53,17 @@
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script type="module" src="js/boot-resources.js"></script>
 
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>-->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+
     <script type="text/javascript" src="js/components/navigation.js"></script>
     <script type="text/javascript" src="js/components/select-culture.js"></script>
     <script type="text/javascript" src="js/components/writing-effect.js"></script>
-    <script type="text/javascript" src="js/components/parallax.js"></script>
+    <script type="text/javascript" src="js/components/mouse-move-parallax.js"></script>
+    <script type="text/javascript" src="js/components/carousel-config.js"></script>
 </body>
 
 </html>

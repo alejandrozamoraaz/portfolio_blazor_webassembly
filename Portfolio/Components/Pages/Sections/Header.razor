@@ -1,7 +1,7 @@
 ﻿@inject IJSRuntime JSRuntime
 
 <div class="row">
-    <div class="col col-8 horizontal-center" style="z-index: 20">
+    <div class="col col-10 horizontal-center" style="z-index: 20">
         <h3 class="text">Ing.</h3>
         <h1 class="text-title">Junior Alejandro Zamora</h1>
 
@@ -13,10 +13,8 @@
 
         <ContactButtons />
     </div>
-    <div class="col col-4 horizontal-center">
-        <div class="parallax-card border-radius" style="right: 60px">
-            <img class="parallax-item image" style="min-width: 200px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" />
-        </div>
+    <div class="col col-2 horizontal-center">
+        <img class="image" height="500" width="500" style="position: absolute; right: 0px" alt="Profile" src="assets/images/profile.png" />
     </div>
 </div>
 
@@ -28,7 +26,6 @@
             List<string> words = new() { CultureDisplay["Developer"], CultureDisplay["Designer"], CultureDisplay["Engineer"] };
 
             await JSRuntime.InvokeVoidAsync("consoleText", words);
-            await JSRuntime.InvokeVoidAsync("initMouseMoveParallax");
         }
     }
 }

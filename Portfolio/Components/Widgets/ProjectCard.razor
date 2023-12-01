@@ -1,13 +1,38 @@
-﻿<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">G</a>
+﻿@using Portfolio.Entities
+
+<div class="card card-border border-radius">
+    @* <div class="f-carousel">
+        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
+            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 1">
+        </a>
+        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
+            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 2">
+        </a>
+        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
+            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 3">
+        </a>
+    </div> *@
+
+    @* <img class="card-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Project Image"> *@
+
+    <div>
+        <h3 class="secondary-text-color text-center" style="font-weight:800">@Project.Title</h3>
+        <p class="text-small">@Project.Description</p>
+    </div>
+
+    <div class="row">
+        @if (Project.Url != null)
+        {
+            <a target="_blank" href="@Project.Url" class="button button-text">Ver proyecto</a>
+        }
+        else
+        {
+            <p class="button button-text">Privado</p>
+        }
     </div>
 </div>
 
 @code {
     [Parameter]
-    public string? Title { get; set; }
+    public required ProjectEntity Project { get; init; }
 }

@@ -121,28 +121,16 @@
     <value>About</value>
   </data>
   <data name="About01" xml:space="preserve">
-    <value>Junior Alejandro Zamora is a professional highly committed to excellence and constant evolution. His avant-garde approach positions him as a tireless learner,
-always immersed in the latest technologies and disciplines for both personal and professional growth.</value>
+    <value>Junior Alejandro Zamora Navarrete is a passionate engineer with an avant-garde approach and outstanding skills in design, architecture, and software and video game development, virtual and augmented reality, AI development, and data analysis. Committed to excellence and continuous growth, he stands out for his ability to tackle challenging projects with enthusiasm and adapt to dynamic environments.</value>
   </data>
   <data name="About02" xml:space="preserve">
-    <value>In the constant pursuit of excellence,
-He stands out as a versatile engineer, skilled in design, software development, virtual and augmented reality, as well as data analysis and emerging technologies.</value>
+    <value>With an unwavering commitment to quality, Zamora brings creativity and versatility to every task, being recognized for his ability to deliver innovative solutions. His unique blend of technical and creative skills makes him a valuable asset for projects that demand a comprehensive approach and a proactive mindset.</value>
   </data>
-  <data name="About03" xml:space="preserve">
-    <value>His passion for creating interactive experiences drives him to explore new possibilities in the field of technology. With an agile mindset and an unwavering dedication to quality,
-Zamora is prepared to collaborate on challenging and exciting projects, bringing creativity and versatility to every task he undertakes.</value>
+  <data name="Badges" xml:space="preserve">
+    <value>Badges</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
-  </data>
-  <data name="DataAnalyticsAI" xml:space="preserve">
-    <value>Data Analytics &amp; AI</value>
-  </data>
-  <data name="DataAnalyticsAI01" xml:space="preserve">
-    <value>He possesses solid knowledge in databases and data analysis techniques, charting his path to specialization as a data scientist.</value>
-  </data>
-  <data name="DataAnalyticsAI02" xml:space="preserve">
-    <value>Demonstrates experience in using Python for the implementation of artificial intelligence, neural networks, and associated tools.</value>
   </data>
   <data name="Designer" xml:space="preserve">
     <value>Designer</value>
@@ -156,32 +144,14 @@ Zamora is prepared to collaborate on challenging and exciting projects, bringing
   <data name="FullStackDevelopment" xml:space="preserve">
     <value>Full Stack Development</value>
   </data>
-  <data name="FullStackDevelopment01" xml:space="preserve">
-    <value>Exhibits strong skills in .Net Core, CSS, Bootstrap, JavaScript, and C# to conceive robust and efficient web applications.</value>
-  </data>
-  <data name="FullStackDevelopment02" xml:space="preserve">
-    <value>He implements agile methodologies in enterprise software development, ensuring adaptability to changes and the delivery of exceptional results in collaborative projects.</value>
-  </data>
-  <data name="FullStackDevelopment03" xml:space="preserve">
-    <value>He is proficient with tools such as Android Studio, Kotlin, Jetpack Compose, MAUI, Java, and Flutter, excelling in the development of modern and scalable mobile applications.</value>
-  </data>
-  <data name="FullStackDevelopment04" xml:space="preserve">
-    <value>He holds the Junior Developer badge at Unity, supporting his ability to create video games, virtual and augmented reality experiences.</value>
-  </data>
   <data name="GraphicDesignUIUX" xml:space="preserve">
     <value>Graphic design, UI &amp; UX</value>
-  </data>
-  <data name="GraphicDesignUIUX01" xml:space="preserve">
-    <value>He demonstrates mastery in the use of Figma and XD for the creation of intuitive and aesthetically appealing interfaces.</value>
   </data>
   <data name="IAM" xml:space="preserve">
     <value>I am</value>
   </data>
   <data name="PortfolioTitle" xml:space="preserve">
     <value>Junior Alejandro Zamora's Portfolio</value>
-  </data>
-  <data name="ProfessionalExperience" xml:space="preserve">
-    <value>Professional experience</value>
   </data>
   <data name="Projects" xml:space="preserve">
     <value>Projects</value>
@@ -190,6 +160,6 @@ Zamora is prepared to collaborate on challenging and exciting projects, bringing
     <value>Skills</value>
   </data>
   <data name="Top" xml:space="preserve">
-    <value>Top</value>
+    <value>Home</value>
   </data>
 </root>
