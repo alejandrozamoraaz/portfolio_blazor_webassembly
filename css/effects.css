@@ -1,0 +1,34 @@
+﻿.rotate-infinite {
+    animation: rotate360 1s linear infinite;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.show-on {
+    view-timeline-name: --show-on;
+    view-timeline-axis: block;
+    animation-timeline: --show-on;
+    animation-name: showOn;
+    animation-range: entry 5% cover 13%;
+    animation-fill-mode: both;
+}
+
+@keyframes showOn {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}

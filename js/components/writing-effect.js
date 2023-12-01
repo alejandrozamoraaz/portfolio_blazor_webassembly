@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     window.consoleText = function (words) {
-        const colors = ['#9802cd', '#6960fc', '#dc9af3'];
+        const colors = ['#9802cd', '#dc9af3'];
         let letterCount = 1;
         let letterOffset = 1;
         let waiting = false;
