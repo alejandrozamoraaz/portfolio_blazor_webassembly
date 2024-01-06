@@ -4,10 +4,10 @@ public class Culture
 {
     public static List<CultureData> SupportedCultures
     {
-        get => new() {
+        get => [
             new CultureData{ Code = "en", Display = "English" },
             new CultureData{ Code = "es", Display = "Español" },
-        };
+        ];
     }
 }
 

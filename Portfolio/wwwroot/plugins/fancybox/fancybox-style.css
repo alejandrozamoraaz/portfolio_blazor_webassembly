@@ -1,0 +1,43 @@
+﻿.fancybox-protected {
+    background-image: url("https://fancyapps.com/img/watermark.png");
+    background-size: contain;
+}
+
+.fancybox__backdrop::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    filter: blur(2px);
+    left: 50%;
+    top: 50%;
+    transform: scale(11);
+    opacity: 0.3;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fancybox__toolbar {
+    padding: var(--padding-normal);
+}
+
+.fancybox__toolbar,
+.fancybox__nav {
+    --f-button-border-radius: 50%;
+    --f-button-bg: rgb(91 78 76 / 64%);
+    --f-button-hover-bg: rgb(91 78 76 / 74%);
+    --f-button-active-bg: rgb(91 78 76 / 84%);
+}
+
+.fancybox__nav {
+    --f-button-svg-width: var(--icon-size);
+    --f-button-svg-height: var(--icon-size);
+}
+
+.fancybox__thumbs.is-modern {
+    --f-thumb-width: var(--button-icon-size);
+    --f-thumb-height: var(--button-icon-size);
+    --f-thumb-gap: var(--padding-small);
+}

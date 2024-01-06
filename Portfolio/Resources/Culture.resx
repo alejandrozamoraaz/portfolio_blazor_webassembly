@@ -121,10 +121,19 @@
     <value>About</value>
   </data>
   <data name="About01" xml:space="preserve">
-    <value>Junior Alejandro Zamora Navarrete is a passionate engineer with an avant-garde approach and outstanding skills in design, architecture, and software and video game development, virtual and augmented reality, AI development, and data analysis. Committed to excellence and continuous growth, he stands out for his ability to tackle challenging projects with enthusiasm and adapt to dynamic environments.</value>
+    <value>Junior Alejandro Zamora Navarrete is a passionate engineer with an avant-garde approach and outstanding skills in design, architecture, software and video game development, virtual and augmented reality, AI development, and data analysis.</value>
   </data>
   <data name="About02" xml:space="preserve">
-    <value>With an unwavering commitment to quality, Zamora brings creativity and versatility to every task, being recognized for his ability to deliver innovative solutions. His unique blend of technical and creative skills makes him a valuable asset for projects that demand a comprehensive approach and a proactive mindset.</value>
+    <value>Committed to excellence and continuous growth, he stands out for his ability to tackle challenging projects with enthusiasm and adapt to dynamic environments.</value>
+  </data>
+  <data name="About03" xml:space="preserve">
+    <value>With an unwavering commitment to quality, Zamora brings creativity and versatility to every task, being recognized for his ability to deliver innovative solutions.</value>
+  </data>
+  <data name="About04" xml:space="preserve">
+    <value>His unique blend of technical and creative skills makes him a valuable asset for projects that demand a comprehensive approach and a proactive mindset.</value>
+  </data>
+  <data name="Analyst" xml:space="preserve">
+    <value>Analyst</value>
   </data>
   <data name="Badges" xml:space="preserve">
     <value>Badges</value>
@@ -137,9 +146,6 @@
   </data>
   <data name="Developer" xml:space="preserve">
     <value>Developer</value>
-  </data>
-  <data name="Engineer" xml:space="preserve">
-    <value>Engineer</value>
   </data>
   <data name="FullStackDevelopment" xml:space="preserve">
     <value>Full Stack Development</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="Skills" xml:space="preserve">
     <value>Skills</value>
+  </data>
+  <data name="TextAutoTranslated" xml:space="preserve">
+    <value>Text translated from Spanish</value>
   </data>
   <data name="Top" xml:space="preserve">
     <value>Home</value>

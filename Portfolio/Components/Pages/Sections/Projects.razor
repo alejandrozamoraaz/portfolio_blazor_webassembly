@@ -1,33 +1,17 @@
 ﻿@using Portfolio.Services.Projects
 
 @inject IProjectsService Service
-@* @inject IJSRuntime JSRuntime *@
 
-<div class="row horizontal-center vertical-center">
-    <img width="300" height="341" src="https://pngimg.com/uploads/under_construction/under_construction_PNG4.png" />
-</div>
-
-@* @foreach (var type in Service.ProjectTypes)
-{
-    <h1 class="primary-text-color m-y-large">@type.Type</h1>
-
-    <div class="grid grid-items">
-        @foreach (var project in type.Projects)
-        {
-            <ProjectCard Project="@project" />
-        }
-    </div>
-}
- *@
-
-@*
-@code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+<div class="col col-12">
+    @foreach (var type in Service.ProjectTypes)
     {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("configureCarousel");
-        }
+        <h1 class="m-y-large primary-text-color">@type.Type</h1>
+
+        <div class="f-carousel carousel-projects">
+            @foreach (var project in type.Projects)
+            {
+                <ProjectCard Project="@project" />
+            }
+        </div>
     }
-}
- *@
+</div>

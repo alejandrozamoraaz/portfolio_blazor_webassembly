@@ -1,35 +1,34 @@
 ﻿@using Portfolio.Entities
 
-<div class="card card-border border-radius">
-    @* <div class="f-carousel">
-        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
-            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 1">
-        </a>
-        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
-            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 2">
-        </a>
-        <a class="f-carousel__slide" data-fancybox="@Project.Title" data-caption="@Project.Description" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png">
-            <img width="50" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Imagen 3">
-        </a>
-    </div> *@
+<div class="f-carousel__slide">
+    <figure class="card card-border border-radius justify-between">
+        <div class="f-carousel carousel-project-images">
+            @foreach (var imageIndex in Enumerable.Range(1, Project.ImagesCount))
+            {
+                <div class="f-carousel__slide border-radius">
+                    <a data-fancybox="@Project.Id" data-caption="@Project.Description" href="@($"assets/images/projects/{Project.Id:D3}/{imageIndex:D2}.png")">
+                        <img class="image card-img" alt="project image" src="@($"assets/images/projects/{Project.Id:D3}/{imageIndex:D2}.png")" />
+                    </a>
+                </div>
+            }
+        </div>
+        <figcaption class="col p-x gap">
+            <h3 class="secondary-text-color">@Project.Title</h3>
+            <p class="text-small">@(Project.Description.Length >= 40 ? Project.Description.Substring(0, 40) + ".." : Project.Description)</p>
+        </figcaption>
+        <div class="p-x p-y justify-between" style="width: 100%;">
+            @if (Project.Url != null)
+            {
+                <a target="_blank" href="@Project.Url" class="button button-text">Ver proyecto</a>
+            }
+            else
+            {
+                <p class="chip">Privado</p>
+            }
 
-    @* <img class="card-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" alt="Project Image"> *@
-
-    <div>
-        <h3 class="secondary-text-color text-center" style="font-weight:800">@Project.Title</h3>
-        <p class="text-small">@Project.Description</p>
-    </div>
-
-    <div class="row">
-        @if (Project.Url != null)
-        {
-            <a target="_blank" href="@Project.Url" class="button button-text">Ver proyecto</a>
-        }
-        else
-        {
-            <p class="button button-text">Privado</p>
-        }
-    </div>
+            <p class="chip">@Project.Year</p>
+        </div>
+    </figure>
 </div>
 
 @code {

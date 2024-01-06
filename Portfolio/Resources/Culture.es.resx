@@ -121,10 +121,19 @@
     <value>Acerca de</value>
   </data>
   <data name="About01" xml:space="preserve">
-    <value>Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos. Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos.</value>
+    <value>Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos.</value>
   </data>
   <data name="About02" xml:space="preserve">
-    <value>Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras. Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva.</value>
+    <value>Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos.</value>
+  </data>
+  <data name="About03" xml:space="preserve">
+    <value>Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras.</value>
+  </data>
+  <data name="About04" xml:space="preserve">
+    <value>Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva.</value>
+  </data>
+  <data name="Analyst" xml:space="preserve">
+    <value>Analista</value>
   </data>
   <data name="Badges" xml:space="preserve">
     <value>Insignias</value>
@@ -137,9 +146,6 @@
   </data>
   <data name="Developer" xml:space="preserve">
     <value>Desarrollador</value>
-  </data>
-  <data name="Engineer" xml:space="preserve">
-    <value>Ingeniero</value>
   </data>
   <data name="FullStackDevelopment" xml:space="preserve">
     <value>Desarrollo Full Stack</value>

@@ -1,4 +1,5 @@
-﻿@page "/"
+﻿@inject IJSRuntime JSRuntime
+@page "/"
 
 <div class="col gap-large">
     <section id="Header" class="show-on container-fluid gradient-background-color border-radius-large vertical-center" style="height: 500px">
@@ -18,3 +19,13 @@
         </section>
     }
 </div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+            await JSRuntime.InvokeVoidAsync("configureCarousel");
+        // }
+    }
+}

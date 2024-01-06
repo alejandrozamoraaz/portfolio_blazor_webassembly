@@ -2,7 +2,9 @@
 
 public class ProjectEntity
 {
-    public required List<string> ImageURLs { get; init; }
+    public required int Id { get; init; }
+    //public required List<string> ImageURLs { get; init; }
+    public required int ImagesCount { get; init; }
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required int Year { get; init; }

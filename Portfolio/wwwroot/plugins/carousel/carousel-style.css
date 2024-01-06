@@ -1,0 +1,57 @@
+﻿.f-carousel {
+    --f-carousel-slide-width: 100%;
+    --f-carousel-spacing: 0;
+    /*--f-carousel-slide-padding: 0 var(--padding-large);*/
+    /*--f-button-prev-pos: var(--button-icon-size);*/
+    /*--f-button-next-pos: var(--button-icon-size);*/
+    --f-button-width: var(--button-icon-size);
+    --f-button-height: var(--button-icon-size);
+    --f-button-border-radius: 50%;
+    --f-button-svg-width: var(--icon-size);
+    --f-button-svg-height: var(--icon-size);
+    --f-button-svg-stroke-width: 1.5;
+    --f-carousel-dot-color: white;
+    --f-button-bg: #333;
+    --f-button-color: white;
+}
+
+/*@media (min-width: 640px) {
+    .f-carousel {
+        --f-carousel-slide-width: calc(100% / 3);
+    }
+}*/
+
+
+
+
+
+
+
+/*.f-carousel .f-carousel__slide {
+        padding: 50px;
+        background: #eee;
+    }*/
+
+/*@media (min-width: 768px) {
+    .f-carousel {
+        --f-carousel-slide-width: calc(100% / 3);
+    }
+}*/
+
+/**/
+/* For large screens */
+/**/
+@media (min-width: 768px) {
+    .f-carousel {
+        --f-carousel-slide-width: calc(100% / 3);
+    }
+}
+
+/**/
+/* Styles for mobile devices and tablets in portrait mode */
+/**/
+@media (max-width: 767px) {
+    .f-carousel {
+        --f-carousel-slide-width: calc(100% / 1.5);
+    }
+}

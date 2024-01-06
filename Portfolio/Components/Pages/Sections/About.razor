@@ -1,7 +1,15 @@
 ﻿<div class="col col-12">
     <div class="text m-b-large">
-        <p>@CultureDisplay["About01"]</p>
-        <p class="m-t-large">@CultureDisplay["About02"]</p>
+        <p style="font-weight: 800;">@CultureDisplay["About01"]</p>
+        <p class="m-y-large">@CultureDisplay["About02"]</p>
+        <div class="row">
+            <div class="col col-6">
+                <p>@CultureDisplay["About03"]</p>
+            </div>
+            <div class="col col-6">
+                <p>@CultureDisplay["About04"]</p>
+            </div>
+        </div>
     </div>
 
     <h1 class="primary-text-color m-t-large">@CultureDisplay["Skills"]</h1>
@@ -19,7 +27,7 @@
         @foreach (var badge in Badges)
         {
             <a class="button col" target="_blank" href="@badge.Url">
-                <img height="100" width="100" src="assets/images/badges/@badge.ImageName" />
+                <img height="100" width="100" alt="@badge.Name" src="assets/images/badges/@badge.ImageName" />
                 <p class="text-center">@badge.Name</p>
             </a>
         }
@@ -62,7 +70,7 @@
     {
         "Figma",
         "XD",
-        ".Net Core",
+        ".NET",
         "CSS",
         "C#",
         "Kotlin",

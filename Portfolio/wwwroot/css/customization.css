@@ -55,13 +55,13 @@ select option {
     background: linear-gradient(to left, #6960fc33, #9802cd33);
 }
 
-.card-border {
-    border: 2px solid var(--primary-color-highlight);
+.chip {
+    color: var(--primary-color-highlight);
 }
 
-    .card-border:hover {
-        box-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color);
-    }
+.card-border, .chip {
+    border: 2px solid var(--primary-color-highlight);
+}
 
 .button {
     background: none;

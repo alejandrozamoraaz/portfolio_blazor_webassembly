@@ -1,4 +1,12 @@
-﻿.rotate-infinite {
+﻿.layout .top-bar .brand:hover > :first-child {
+    transform: rotate(-180deg);
+}
+
+.layout .top-bar .brand:not(:hover) > :first-child {
+    transform: rotate(0deg);
+}
+
+.rotate-infinite {
     animation: rotate360 1s linear infinite;
 }
 

@@ -10,14 +10,14 @@
     --padding-small: 8px;
     --padding-normal: 16px;
     --padding-large: 24px;
+    --icon-size: 32px; /* 22 */
+    --button-icon-size: 42px; /* 48 */
 }
 
 :scope {
     --border-radius: 16px;
     --border-radius-large: 32px;
     --button-size: 32px;
-    --button-icon-size: 42px;
-    --icon-size: 32px;
     --icon-size-large: 48px;
     --font-size-title: 3em;
     --font-size-large: 32px;
@@ -115,6 +115,13 @@ li {
     width: var(--icon-size-large);
     height: var(--icon-size-large);
     transition: all 0.1s ease;
+}
+
+.chip {
+    display: inline-block;
+    padding: var(--padding-small);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
 }
 
 .text-small {
@@ -264,6 +271,11 @@ li {
     justify-content: center;
 }
 
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 .p-x {
     padding-right: var(--padding-normal);
     padding-left: var(--padding-normal);
@@ -326,47 +338,13 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
-
-
-
-
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 200px;
+    width: 220px;
     height: 400px;
-    padding: var(--padding-normal);
-    margin: var(--padding-normal);
+    flex-direction: column;
 }
 
 .card-img {
-    /*position: relative;*/
-    top: var(--padding-small);
-    width: 150px;
+    width: 100px;
     height: 150px;
-}
-/*
-.carousel {
-    display: flex;
-    overflow: hidden;
-}
-
-    .carousel img {
-        width: 100%;
-        cursor: pointer;
-    }
-*/
-
-
-
-.fancybox-protected {
-    background-image: url("https://fancyapps.com/img/watermark.png");
-    background-size: cover;
-}
-
-.f-carousel {
-    --f-carousel-slide-height: 60%;
-    --f-carousel-spacing: 10px;
-    height: 200px;
 }
